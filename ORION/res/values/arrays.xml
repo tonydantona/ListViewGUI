@@ -1,0 +1,15 @@
+<resources>
+    <string-array name="stops">
+        <item>Del 10 Main St 36.72 -76.22 2.31 8:30 10:30 </item>
+        <item>Del 20 Main St 36.72 -76.10 2.31 8:30 10:3 </item>
+        <item>Del 30 Main St 36.72 -76.22 2.31 8:30 12:00 </item>
+        <item>Del 40 Main St 36.72 -76.22 2.31 8:30 23:99 </item>
+        <item>Del 40 Main St 36.72 -76.22 2.31 8:30 23:99 </item>
+    </string-array>
+    
+    <string-array name="packages">
+        <item>Jim Jones 8:30 10:30 NDA </item>
+        <item>Tom Hanks 8:30 2:30 PUP </item>
+        <item>John Lennon 8:30 23:99 GND </item>    
+    </string-array>
+</resources>

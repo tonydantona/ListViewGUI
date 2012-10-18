@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4682B4"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Svc" />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Address" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Earliest" />
+    
+        <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Commit" />
+        
+        <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="ETA" />
+    
+
+    <!--  
+        style="?android:attr/listSeparatorTextViewStyle"
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".10"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Pkgs" />
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight=".10"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="odo" />
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight=".10"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="rdo" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Lat" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Lon" />
+
+    <TextView
+        android:id="@+id/stopid"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight=".10"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="StopID" />
+ -->
+
+</LinearLayout>

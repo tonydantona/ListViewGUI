@@ -1,0 +1,48 @@
+[
+   {
+     "stopid": 1,
+     "address": "10 Main St",
+     "lat": 36.50,
+     "lon": -72.11,
+     "svctime": 2.31,
+     "numpkgs": 1,
+     "svc": "Gnd",
+     "rdo": 2,
+     "odo": 1,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 845,
+     "package": {
+       "consignee": "android_newb",
+       "earliest": 830,
+       "commit": 1030,
+       "svclevel": 1
+      },
+      "package": {
+       "consignee": "tony d",
+       "earliest": 1230,
+       "commit": 1630,
+       "svclevel": 3
+      }
+   },
+   {
+     "stopid": 2,
+     "address": "2311 York Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.31,
+     "numpkgs": 0,
+     "svc": "Pup",
+     "rdo": 1,
+     "odo": 2,
+     "esstclicks": 1430,
+     "lsstclicks": 2399,
+     "eta": 1500,
+     "package": {
+       "consignee": "Conrad",
+       "earliest": 1430,
+       "commit": 2399,
+       "svclevel": 2
+     }
+   }
+ ]

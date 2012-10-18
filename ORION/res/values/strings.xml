@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">ORION</string>
+    <string name="title_section3">Map</string>
+    <string name="title_section2">Completed</string>
+    <string name="title_section1">Stops</string>
+    <string name="hello_world">ORION</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">ORION</string>
+
+</resources>
