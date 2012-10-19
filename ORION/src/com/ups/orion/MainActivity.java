@@ -127,11 +127,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			if(i == 0)
 			{
 				Fragment fragment = new StopsFragment();
-//				Bundle args = new Bundle();
-//				args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, i + 1);
-//				fragment.setArguments(args);
 				
-				return (Fragment)fragment;
+				return fragment;
 			}
 			else 
 			{

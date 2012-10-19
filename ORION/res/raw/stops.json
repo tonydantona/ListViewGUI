@@ -5,44 +5,410 @@
      "lat": 36.50,
      "lon": -72.11,
      "svctime": 2.31,
-     "numpkgs": 1,
-     "svc": "Gnd",
+     "numpkgs": 2,
+     "svc": "1DA",
      "rdo": 2,
      "odo": 1,
      "esstclicks": 830,
-     "lsstclicks": 2399,
+     "lsstclicks": 1030,
      "eta": 845,
      "package": {
-       "consignee": "android_newb",
+       "consignee": "Citi Bank",
        "earliest": 830,
        "commit": 1030,
        "svclevel": 1
       },
       "package": {
-       "consignee": "tony d",
-       "earliest": 1230,
-       "commit": 1630,
-       "svclevel": 3
+       "consignee": "Citi Bank",
+       "earliest": 830,
+       "commit": 1030,
+       "svclevel": 1
       }
    },
    {
      "stopid": 2,
-     "address": "2311 York Rd",
+     "address": "25 Main St",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.4,
+     "numpkgs": 1,
+     "svc": "1DA",
+     "rdo": 1,
+     "odo": 2,
+     "esstclicks": 830,
+     "lsstclicks": 1030,
+     "eta": 852,
+     "package": {
+       "consignee": "Conrad",
+       "earliest": 830,
+       "commit": 1030,
+       "svclevel": 1
+     }
+   },
+   {
+     "stopid": 3,
+     "address": "12 North Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.03,
+     "numpkgs": 1,
+     "svc": "1DA",
+     "rdo": 5,
+     "odo": 3,
+     "esstclicks": 830,
+     "lsstclicks": 1030,
+     "eta": 902,
+     "package": {
+       "consignee": "Belle Cose",
+       "earliest": 830,
+       "commit": 1030,
+       "svclevel": 1
+     }
+   },
+   {
+     "stopid": 4,
+     "address": "55 North Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.81,
+     "numpkgs": 1,
+     "svc": "2DA",
+     "rdo": 4,
+     "odo": 4,
+     "esstclicks": 830,
+     "lsstclicks": 1230,
+     "eta": 915,
+     "package": {
+       "consignee": "MAC",
+       "earliest": 830,
+       "commit": 1230,
+       "svclevel": 2
+     }
+   },
+   {
+     "stopid": 5,
+     "address": "1500 Market St",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 8.31,
+     "numpkgs": 4,
+     "svc": "Gnd",
+     "rdo": 8,
+     "odo": 5,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 930,
+     "package": {
+       "consignee": "Sears",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     },
+     "package": {
+       "consignee": "Sears",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     },
+     "package": {
+       "consignee": "Sears Dock",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     },
+     "package": {
+       "consignee": "Sears Dock",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     }
+  },
+  {
+     "stopid": 6,
+     "address": "2400 York Rd",
      "lat": 33.22,
      "lon": -71.59,
      "svctime": 2.31,
-     "numpkgs": 0,
-     "svc": "Pup",
-     "rdo": 1,
-     "odo": 2,
-     "esstclicks": 1430,
+     "numpkgs": 1,
+     "svc": "Gnd",
+     "rdo": 7,
+     "odo": 6,
+     "esstclicks": 830,
      "lsstclicks": 2399,
-     "eta": 1500,
+     "eta": 945,
      "package": {
-       "consignee": "Conrad",
-       "earliest": 1430,
+       "consignee": "Hilltop",
+       "earliest": 830,
        "commit": 2399,
-       "svclevel": 2
+       "svclevel": 3
+     }
+   },
+   {
+     "stopid": 7,
+     "address": "2311 York Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 8.22,
+     "numpkgs": 0,
+     "svc": "Gnd",
+     "rdo": 5,
+     "odo": 7,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 1000,
+     "package": {
+       "consignee": "Ranga",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     },
+       "package": {
+       "consignee": "Ranga",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     },
+       "package": {
+       "consignee": "Ping",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     },
+       "package": {
+       "consignee": "Rob",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     },
+       "package": {
+       "consignee": "Rob",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     },
+       "package": {
+       "consignee": "Jenn",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     },
+       "package": {
+       "consignee": "Jeff",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     }
+   },
+   {
+     "stopid": 8,
+     "address": "2455 York Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.31,
+     "numpkgs": 1,
+     "svc": "Gnd",
+     "rdo": 7,
+     "odo": 8,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 1045,
+     "package": {
+       "consignee": "Stihl",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     }
+   },
+   {
+     "stopid": 9,
+     "address": "2700 York Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.31,
+     "numpkgs": 1,
+     "svc": "Gnd",
+     "rdo": 7,
+     "odo": 9,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 1055,
+     "package": {
+       "consignee": "High Tops",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     }
+   },
+   {
+     "stopid": 10,
+     "address": "2549 York Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.31,
+     "numpkgs": 1,
+     "svc": "Gnd",
+     "rdo": 7,
+     "odo": 10,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 1101,
+     "package": {
+       "consignee": "Gibby",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     }
+   },
+   {
+     "stopid": 11,
+     "address": "2900 York Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.31,
+     "numpkgs": 1,
+     "svc": "Gnd",
+     "rdo": 7,
+     "odo": 11,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 1115,
+     "package": {
+       "consignee": "Med Center",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     }
+   },
+   {
+     "stopid": 12,
+     "address": "25 Timonium Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.31,
+     "numpkgs": 1,
+     "svc": "Gnd",
+     "rdo": 7,
+     "odo": 12,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 1120,
+     "package": {
+       "consignee": "Pharmacy",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     }
+   },
+   {
+     "stopid": 13,
+     "address": "50 Timonium Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.31,
+     "numpkgs": 1,
+     "svc": "Gnd",
+     "rdo": 7,
+     "odo": 13,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 1130,
+     "package": {
+       "consignee": "Hair By Elite",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     }
+   },
+   {
+     "stopid": 14,
+     "address": "55 Timonium Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.31,
+     "numpkgs": 1,
+     "svc": "Gnd",
+     "rdo": 7,
+     "odo": 14,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 1145,
+     "package": {
+       "consignee": "CVS",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     }
+   },
+   {
+     "stopid": 15,
+     "address": "100 Padonia Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 2.31,
+     "numpkgs": 1,
+     "svc": "Gnd",
+     "rdo": 7,
+     "odo": 15,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 1155,
+     "package": {
+       "consignee": "Mars",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     }
+   },
+   {
+     "stopid": 16,
+     "address": "110 Padonia Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 3.31,
+     "numpkgs": 3,
+     "svc": "Gnd",
+     "rdo": 15,
+     "odo": 16,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 1201,
+     "package": {
+       "consignee": "Smith",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     },
+       "package": {
+       "consignee": "Smith",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     },
+       "package": {
+       "consignee": "Smith",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
+     }
+   },
+   {
+     "stopid": 17,
+     "address": "200 Padonia Rd",
+     "lat": 33.22,
+     "lon": -71.59,
+     "svctime": 3.01,
+     "numpkgs": 1,
+     "svc": "Gnd",
+     "rdo": 20,
+     "odo": 17,
+     "esstclicks": 830,
+     "lsstclicks": 2399,
+     "eta": 1236,
+     "package": {
+       "consignee": "Jones",
+       "earliest": 830,
+       "commit": 2399,
+       "svclevel": 3
      }
    }
  ]

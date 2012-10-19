@@ -35,13 +35,6 @@ public class StopsFragment extends Fragment
 	// construct the view you want to show inside this fragment. Pass a reference back to that top level view
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
-//		getActivity().requestWindowFeature(Window.FEATURE_CUSTOM_TITLE); 
-
-		// create a view by inflating the layout xml and putting it in the container
-		mFragmentView = inflater.inflate(R.layout.stops_layout, container,false);
-		
-//		getActivity().getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.your_header); 
-		
 		InputStream jsonStops = getResources().openRawResource(R.raw.stops);
 		JsonStopsReader jReader = new JsonStopsReader();
 		
@@ -54,18 +47,31 @@ public class StopsFragment extends Fragment
 			e.printStackTrace();
 		}
 		
-		// get a reference to list view contained within the fragment
-		// note: listview needed an android id so header layout could find it
-		mStopListView = (ListView) mFragmentView.findViewById(android.R.id.list);
+		// create a view by inflating the layout xml and putting it in the container
+		mFragmentView = inflater.inflate(R.layout.stops_layout, container,false);
+		
+		// get and set up the listview to view stops
+		mStopListView = (ListView) mFragmentView.findViewById(R.id.stoplist);
 		mStopListView.setHorizontalScrollBarEnabled(true);
-
-		View header = inflater.inflate(R.layout.header, null);
-		mStopListView.addHeaderView(header);
-
+		mStopListView.setVerticalScrollBarEnabled(true);
+		
+		// make a stopAdapter and attach it to the stop listview
 		StopAdapter stopAdapter = new StopAdapter(getActivity(), mStops);
-
 		mStopListView.setAdapter(stopAdapter);
-//		mConsigneeView.setAdapter(pkgAdapter);
+		
+		// get and set up the listview to view consignees
+		mConsigneeListView = (ListView) mFragmentView.findViewById(R.id.consignee);
+		mConsigneeListView.setHorizontalScrollBarEnabled(true);
+		mConsigneeListView.setVerticalScrollBarEnabled(true);
+		
+		Stop stop = null;
+		if(mStops != null)
+		{
+			stop = (Stop) stopAdapter.getItem(6);
+		}
+
+		ConsigneeAdapter consigneeAdapter = new ConsigneeAdapter(getActivity(), stop.packages);
+		mConsigneeListView.setAdapter(consigneeAdapter);
 		
 		if(savedInstanceState != null)
 		{
