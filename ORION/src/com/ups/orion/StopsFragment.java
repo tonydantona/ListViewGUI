@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,11 +13,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.View.OnClickListener;
+import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class StopsFragment extends Fragment
 {
@@ -28,7 +33,8 @@ public class StopsFragment extends Fragment
 	List<Stop> mStops;
 	int mStopIndex;
 	
-	SimpleAdapter mAdapter;
+	StopAdapter stopAdapter;
+	ConsigneeAdapter consigneeAdapter;
 	ArrayList<Map<String,String>> mList;
 	
 	@Override
@@ -55,22 +61,32 @@ public class StopsFragment extends Fragment
 		mStopListView.setHorizontalScrollBarEnabled(true);
 		mStopListView.setVerticalScrollBarEnabled(true);
 		
+		// set up highlighting of rows
+		mStopListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+		mStopListView.setSelector(android.R.color.holo_blue_light);
+		mStopListView.setFocusable(true);
+		mStopListView.setSelected(true);
+		
 		// make a stopAdapter and attach it to the stop listview
-		StopAdapter stopAdapter = new StopAdapter(getActivity(), mStops);
+		stopAdapter = new StopAdapter(getActivity(), mStops);
 		mStopListView.setAdapter(stopAdapter);
+		
+		// set stop list view handler
+		mStopListView.setOnItemClickListener(onStopClick);
 		
 		// get and set up the listview to view consignees
 		mConsigneeListView = (ListView) mFragmentView.findViewById(R.id.consignee);
 		mConsigneeListView.setHorizontalScrollBarEnabled(true);
 		mConsigneeListView.setVerticalScrollBarEnabled(true);
 		
+		
 		Stop stop = null;
 		if(mStops != null)
 		{
-			stop = (Stop) stopAdapter.getItem(6);
+			stop = (Stop) stopAdapter.getItem(0);
 		}
 
-		ConsigneeAdapter consigneeAdapter = new ConsigneeAdapter(getActivity(), stop.packages);
+		consigneeAdapter = new ConsigneeAdapter(getActivity(), stop.packages);
 		mConsigneeListView.setAdapter(consigneeAdapter);
 		
 		if(savedInstanceState != null)
@@ -82,6 +98,52 @@ public class StopsFragment extends Fragment
 			mStopIndex = 0;
 		}
 		
+//		View v =  mStopListView.getAdapter().getView(0, getView(), mStopListView); 
+//		v.setBackgroundResource(android.R.color.holo_blue_light);
+		
 		return mFragmentView;
 	}
+	
+	private OnItemClickListener onStopClick = new OnItemClickListener()
+	{
+		@Override
+		public void onItemClick(AdapterView<?> arg0, View view, int iPosition, long lPosition)
+		{
+			// select pkgs from selected stop
+			Stop stop = null;
+			if (mStops != null)
+			{
+				stop = (Stop) stopAdapter.getItem(iPosition);
+			}
+
+			consigneeAdapter = new ConsigneeAdapter(getActivity(), stop.packages);
+			mConsigneeListView.setAdapter(consigneeAdapter);
+		}
+	};
+
+	public ListView getmStopListView()
+	{
+		return mStopListView;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,11 +1,10 @@
 package com.ups.orion;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
-
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -15,9 +14,11 @@ import android.support.v4.view.ViewPager;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener
 {
@@ -50,6 +51,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		// Set up the action bar.
 		final ActionBar actionBar = getActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+//		actionBar.setBackgroundDrawable(new ColorDrawable(Color.BLACK));
 
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
@@ -83,9 +85,12 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
-		getMenuInflater().inflate(R.menu.activity_main, menu);
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.main_menu, menu);
 		return true;
 	}
+	
+	
 
 	@Override
 	public void onTabUnselected(ActionBar.Tab tab,
