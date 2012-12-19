@@ -9,6 +9,7 @@ import java.util.Map;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,11 +38,13 @@ public class StopsFragment extends Fragment
 	ConsigneeAdapter consigneeAdapter;
 	ArrayList<Map<String,String>> mList;
 	
+	private static final String TAG = StopsFragment.class.getSimpleName();
+	
 	@Override
 	// construct the view you want to show inside this fragment. Pass a reference back to that top level view
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
-		InputStream jsonStops = getResources().openRawResource(R.raw.stops);
+		InputStream jsonStops = getResources().openRawResource(R.raw.stopsismd);
 		JsonStopsReader jReader = new JsonStopsReader();
 		
 		try
@@ -67,7 +70,7 @@ public class StopsFragment extends Fragment
 		mStopListView.setFocusable(true);
 		mStopListView.setSelected(true);
 		
-		// make a stopAdapter and attach it to the stop listview
+		// make a stopAdapter from the list of stops
 		stopAdapter = new StopAdapter(getActivity(), mStops);
 		mStopListView.setAdapter(stopAdapter);
 		
@@ -86,7 +89,12 @@ public class StopsFragment extends Fragment
 			stop = (Stop) stopAdapter.getItem(0);
 		}
 
-		consigneeAdapter = new ConsigneeAdapter(getActivity(), stop.packages);
+		Log.d(TAG, "onCreateView calling consigneeAdapter");
+		
+		// make a consignee adapter from a list of unique consignees
+		stop.SetUniqueConsigneePkgCount();
+		
+		consigneeAdapter = new ConsigneeAdapter(getActivity(), stop.conToPkgCountPairs);
 		mConsigneeListView.setAdapter(consigneeAdapter);
 		
 		if(savedInstanceState != null)
@@ -116,7 +124,8 @@ public class StopsFragment extends Fragment
 				stop = (Stop) stopAdapter.getItem(iPosition);
 			}
 
-			consigneeAdapter = new ConsigneeAdapter(getActivity(), stop.packages);
+			stop.SetUniqueConsigneePkgCount();
+			consigneeAdapter = new ConsigneeAdapter(getActivity(), stop.conToPkgCountPairs);
 			mConsigneeListView.setAdapter(consigneeAdapter);
 		}
 	};
@@ -126,8 +135,6 @@ public class StopsFragment extends Fragment
 		return mStopListView;
 	}
 }
-
-
 
 
 

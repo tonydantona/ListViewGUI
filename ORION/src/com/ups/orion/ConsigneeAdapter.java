@@ -1,6 +1,7 @@
 package com.ups.orion;
 
 import java.util.List;
+import java.util.Map;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,8 +14,14 @@ public class ConsigneeAdapter extends BaseAdapter
 {
 	int mPosition = -1;
 	Context mContext;
-	List<Package> mPkgs;
+	List<Map.Entry<String, Integer>> mConToPkgs;
 	
+	public ConsigneeAdapter(Context context, List<Map.Entry<String, Integer>> conToPkgs)
+	{
+		mContext = context;
+		mConToPkgs = conToPkgs;
+	}
+
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent)
 	{
@@ -28,48 +35,37 @@ public class ConsigneeAdapter extends BaseAdapter
 			pkgView = inflater.inflate(R.layout.consigneerow, parent, false);
 		}
 		
-		Package pkg = mPkgs.get(mPosition); 
+		Map.Entry<String, Integer> conPkgCount = mConToPkgs.get(mPosition); 
 		
-		if (pkg != null)
+		if( conPkgCount != null )
 		{
 			// set text to view
-			TextView tvSvc = (TextView) pkgView.findViewById(R.id.chkboxpkg);
 			TextView tvConsignee = (TextView) pkgView.findViewById(R.id.consignee);
 			TextView tvNumPkgs = (TextView) pkgView.findViewById(R.id.numpkgs);
-			
-			if (tvSvc != null)
-			{
-				tvSvc.setText(String.valueOf(pkg.svclevel));
-			}
+
 			if (tvConsignee != null)
 			{
-				tvConsignee.setText(String.valueOf(pkg.consignee));
+				tvConsignee.setText(String.valueOf(conPkgCount.getKey()));
 			}
 			if (tvNumPkgs != null)
 			{
-				tvNumPkgs.setText(String.valueOf(3));
+				tvNumPkgs.setText(String.valueOf(conPkgCount.getValue()));
 			}
 		}
-
+			
 		return pkgView;
 	}
 
-	public ConsigneeAdapter(Context context, List<Package> pkgs)
-	{
-		mContext = context;
-		mPkgs = pkgs;
-	}
-	
 	@Override
 	public int getCount()
 	{
-		return mPkgs.size();
+		return mConToPkgs.size();
 	}
 
 	@Override
 	public Object getItem(int position)
 	{
-		return mPkgs.get(position);
+		return mConToPkgs.get(position);
 	}
 
 	@Override

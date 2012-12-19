@@ -95,9 +95,16 @@ public class JsonStopsReader
 			{
 				stop.eta = reader.nextInt();
 			}
-			else if (name.equals("package"))
+			else if (name.equals("packages"))
 			{
-				stop.packages.add(readPackage(reader));
+				// the pkgs in the json file are an array (specifically an arary of pkg objects) so we must use beginArray then read each object
+				reader.beginArray();
+				while( reader.hasNext() )
+				{
+					stop.packages.add(readPackage(reader));
+				}
+				
+				reader.endArray();
 			}
 			else
 			{

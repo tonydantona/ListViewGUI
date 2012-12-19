@@ -27,9 +27,9 @@ public final class R {
         public static final int earliest=0x7f090006;
         public static final int eta=0x7f090008;
         public static final int menuExit=0x7f090010;
+        public static final int menuOptimize=0x7f09000f;
         public static final int menuOption1=0x7f09000d;
         public static final int menuOption2=0x7f09000e;
-        public static final int menuOption3=0x7f09000f;
         public static final int menuOptionLeft=0x7f09000b;
         public static final int menuOptionRight=0x7f09000c;
         public static final int menu_settings=0x7f09000a;
@@ -52,6 +52,7 @@ public final class R {
     }
     public static final class raw {
         public static final int stops=0x7f040000;
+        public static final int stopsismd=0x7f040001;
     }
     public static final class string {
         public static final int app_name=0x7f060000;
